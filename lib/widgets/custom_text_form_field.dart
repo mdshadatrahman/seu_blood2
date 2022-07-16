@@ -8,6 +8,8 @@ class CustomTextFormField extends StatelessWidget {
     required this.title,
     required this.hintText,
     required this.isPassword,
+    this.controller,
+    required this.keyboardType,
   }) : super(key: key);
 
   final double height;
@@ -15,6 +17,8 @@ class CustomTextFormField extends StatelessWidget {
   final String title;
   final String hintText;
   final bool isPassword;
+  final TextEditingController? controller;
+  final TextInputType keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +41,8 @@ class CustomTextFormField extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: width * 0.00),
             child: TextFormField(
+              controller: controller,
+              keyboardType: keyboardType,
               decoration: InputDecoration(
                 hintText: hintText.toUpperCase(),
                 hintStyle: const TextStyle(

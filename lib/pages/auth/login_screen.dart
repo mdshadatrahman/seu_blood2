@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seu_blood_2/pages/auth/phone_number.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 import 'package:seu_blood_2/utils/asset_manager.dart';
@@ -103,6 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       title: StringManager.emailPhoneId,
                       hintText: StringManager.typeYourEmailPhoneID,
                       isPassword: false,
+                      keyboardType: TextInputType.text,
                     ),
                     const SizedBox(height: 10),
                     CustomTextFormField(
@@ -111,6 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       title: StringManager.passwordText,
                       hintText: StringManager.typeYourPassword,
                       isPassword: true,
+                      keyboardType: TextInputType.text,
                     ),
                   ],
                 ),
@@ -126,15 +129,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomElevatedButton(
                     text: StringManager.loginText,
                     width: width,
+                    onTap: () {},
                   ),
                   CustomElevatedButton(
                     text: StringManager.registerText,
                     width: width,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PhoneNumberScreen(),
+                        ),
+                      );
+                    },
                   ),
-                  SizedBox(height:  height * 0.1),
+                  SizedBox(height: height * 0.1),
                   CustomElevatedButton(
                     text: StringManager.forgotPassText,
                     width: width,
+                    onTap: () {},
                   ),
                 ],
               ),
