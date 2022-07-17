@@ -5,4 +5,5 @@ class ColorManager {
   static const white = Color(0xffffffff);
   static const shadow = Color(0xff7B7A72);
   static const black = Colors.black;
+  static const background = Color(0xffEFEFEF);
 }

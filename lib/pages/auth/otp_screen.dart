@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:seu_blood_2/pages/auth/registration_screen.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 import 'package:seu_blood_2/utils/asset_manager.dart';
 import 'package:seu_blood_2/widgets/otp_widget.dart';
+
 import '../../widgets/custom_elevated_button.dart';
-import '../../widgets/custom_text_form_field.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({
@@ -201,7 +202,14 @@ class _OTPScreenState extends State<OTPScreen> {
                   CustomElevatedButton(
                     text: StringManager.verify,
                     width: width,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

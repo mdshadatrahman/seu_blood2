@@ -23,4 +23,17 @@ class StringManager {
   static String phoneVerificationLongText =
       'Enter the OTP we have sent on your mobile number: ';
   static String verify = 'verify'.toUpperCase();
+  static String signUpInfo = 'Sing up information'.toUpperCase();
+  static String writeYourName = 'Write your name';
+  static String name = 'Name*';
+  static String emailAddress = 'Email address*';
+  static String exampleEmailAddress = 'user@example.com';
+  static String phoneNumber = 'Phone Number*';
+  static String phoneNumberHint = '+880-1';
+  static String enterPassword = 'Enter password*';
+  static String enterPasswordHint = 'Enter new password';
+  static String reEnterPassword = 'Re-enter password*';
+  static String reEnterPasswordHint = 'Enter the same password again';
+  static String bloodGroup = 'Blood Group*';
+  static String selectBloodGroup = 'Select your blood group';
 }
