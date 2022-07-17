@@ -36,4 +36,6 @@ class StringManager {
   static String reEnterPasswordHint = 'Enter the same password again';
   static String bloodGroup = 'Blood Group*';
   static String selectBloodGroup = 'Select your blood group';
+  static String submit = 'Submit'.toUpperCase();
+  static String alreadyAMember = 'Already a member so click here and login';
 }
