@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'SEU Blood Bank',
       theme: ThemeData(
         primaryColor: ColorManager.primaryColor,
+        fontFamily: 'Roboto',
       ),
       home: const SplashScreen(),
     );
