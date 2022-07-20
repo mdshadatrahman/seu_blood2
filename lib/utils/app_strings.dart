@@ -38,4 +38,13 @@ class StringManager {
   static String selectBloodGroup = 'Select your blood group';
   static String submit = 'Submit'.toUpperCase();
   static String alreadyAMember = 'Already a member so click here and login';
+  static String confirmExit = 'Confirm Exit';
+  static String sureExit = 'Are you sure you want to exit?';
+  static String yes = 'Yes';
+  static String no = 'No';
+  static String makeAPost = 'Make A Post';
+  static String home = 'Home';
+  static String search = 'Search';
+  static String newsFeeds = 'Feeds';
+  static String profile = 'Profile';
 }

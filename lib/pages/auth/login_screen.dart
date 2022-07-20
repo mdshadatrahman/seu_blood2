@@ -3,6 +3,8 @@ import 'package:seu_blood_2/pages/auth/phone_number.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 import 'package:seu_blood_2/utils/asset_manager.dart';
+import 'package:seu_blood_2/widgets/bottom_nav_bar.dart';
+
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_form_field.dart';
 
@@ -129,7 +131,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomElevatedButton(
                     text: StringManager.loginText,
                     width: width,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const CustomBottomNavigationBar(),
+                        ),
+                      );
+                    },
                   ),
                   CustomElevatedButton(
                     text: StringManager.registerText,

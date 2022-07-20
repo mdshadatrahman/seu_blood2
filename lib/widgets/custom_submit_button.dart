@@ -19,7 +19,7 @@ class CustomSubmitButton extends StatelessWidget {
       ),
       child: Center(
         child: InkWell(
-          onTap: () {},
+          onTap: onTap,
           child: Text(
             StringManager.submit,
             style: const TextStyle(

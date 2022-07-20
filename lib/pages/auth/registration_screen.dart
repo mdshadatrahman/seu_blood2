@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
+import 'package:seu_blood_2/widgets/bottom_nav_bar.dart';
 import 'package:seu_blood_2/widgets/custom_dropdown_button.dart';
 import 'package:seu_blood_2/widgets/custom_input_field.dart';
 import 'package:seu_blood_2/widgets/custom_submit_button.dart';
@@ -98,7 +99,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 SizedBox(height: height * 0.05),
 
-                CustomSubmitButton( onTap: (){},),
+                CustomSubmitButton( onTap: (){
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const CustomBottomNavigationBar(),
+                    ),
+                  );
+                },),
 
                 SizedBox(height: height * 0.05),
                 InkWell(
