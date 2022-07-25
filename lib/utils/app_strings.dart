@@ -47,4 +47,7 @@ class StringManager {
   static String search = 'Search';
   static String newsFeeds = 'Feeds';
   static String profile = 'Profile';
+  static String yourBloodGroup = 'Your Blood Group';
+  static String yourStatus = 'Your Status';
+  static String youCanDonate = 'You can donate!';
 }
