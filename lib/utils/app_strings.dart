@@ -50,4 +50,7 @@ class StringManager {
   static String yourBloodGroup = 'Your Blood Group';
   static String yourStatus = 'Your Status';
   static String youCanDonate = 'You can donate!';
+  static String location = 'Location';
+  static String lastDonationDate = 'Last Donation Date'.toUpperCase();
+  static String donorDetails = 'donor details'.toUpperCase();
 }
