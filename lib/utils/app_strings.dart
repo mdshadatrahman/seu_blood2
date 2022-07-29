@@ -53,4 +53,6 @@ class StringManager {
   static String location = 'Location';
   static String lastDonationDate = 'Last Donation Date'.toUpperCase();
   static String donorDetails = 'donor details'.toUpperCase();
+  static String bloodRequest = 'Blood Request';
+  static String donationHistory = 'Donation History';
 }

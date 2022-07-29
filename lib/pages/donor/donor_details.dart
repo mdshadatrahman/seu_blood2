@@ -67,7 +67,6 @@ class DonorDetails extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5),
-
             ],
           ),
         ),
