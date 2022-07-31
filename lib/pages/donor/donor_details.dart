@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 import 'package:seu_blood_2/utils/asset_manager.dart';
+import 'package:seu_blood_2/widgets/profile_details_fields.dart';
 import 'package:seu_blood_2/widgets/small_blood_group_container.dart';
 
 class DonorDetails extends StatelessWidget {
@@ -27,8 +28,8 @@ class DonorDetails extends StatelessWidget {
 
               //Profile Picture
               Container(
-                height: width * 0.5,
-                width: width * 0.5,
+                height: width * 0.35,
+                width: width * 0.35,
                 decoration: BoxDecoration(
                   image: const DecorationImage(
                     image: AssetImage(AssetManager.defaultProfilePicture),
@@ -37,7 +38,7 @@ class DonorDetails extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(500)),
                   border: Border.all(
                     color: ColorManager.primaryColor,
-                    width: 3,
+                    width: 4,
                   ),
                 ),
               ),
@@ -67,6 +68,22 @@ class DonorDetails extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5),
+
+              profileDetailsFields(text: 'Department', height: height, width: width),
+              profileDetailsFields(text: 'Address', height: height, width: width),
+              profileDetailsFields(text: 'Contact No.', height: height, width: width),
+              profileDetailsFields(text: 'Last Donation Date', height: height, width: width),
+
+              //Call Button
+              SizedBox(height: height * 0.03),
+              SizedBox(
+                width: width * 0.4,
+                height: height * 0.07,
+                child: ElevatedButton(
+                  onPressed: (){},
+                  child: const Text("CALL"),
+                ),
+              )
             ],
           ),
         ),
