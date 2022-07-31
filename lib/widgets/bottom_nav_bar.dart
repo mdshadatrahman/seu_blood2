@@ -5,6 +5,7 @@ import 'package:seu_blood_2/pages/bottom_navs/home.dart';
 import 'package:seu_blood_2/pages/bottom_navs/news_feeds.dart';
 import 'package:seu_blood_2/pages/bottom_navs/profile.dart';
 import 'package:seu_blood_2/pages/bottom_navs/search.dart';
+import 'package:seu_blood_2/pages/request/blood_request.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 
@@ -79,7 +80,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           bucket: bucket,
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const BloodRequestScreen(),
+              ),
+            );
+          },
           backgroundColor: ColorManager.primaryColor,
           elevation: 0,
           child: Center(
@@ -126,14 +134,16 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     children: [
                       Icon(
                         Icons.home,
-                        color:
-                            currentTab == 0 ? ColorManager.primaryColor : Colors.grey,
+                        color: currentTab == 0
+                            ? ColorManager.primaryColor
+                            : Colors.grey,
                       ),
                       Text(
                         StringManager.home,
                         style: TextStyle(
-                          color:
-                              currentTab == 0 ? ColorManager.primaryColor : Colors.grey,
+                          color: currentTab == 0
+                              ? ColorManager.primaryColor
+                              : Colors.grey,
                         ),
                       )
                     ],
@@ -154,8 +164,9 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                       children: [
                         Icon(
                           Icons.search,
-                          color:
-                              currentTab == 1 ? ColorManager.primaryColor : Colors.grey,
+                          color: currentTab == 1
+                              ? ColorManager.primaryColor
+                              : Colors.grey,
                         ),
                         Text(
                           StringManager.search,
@@ -182,14 +193,16 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     children: [
                       Icon(
                         Icons.local_fire_department_outlined,
-                        color:
-                            currentTab == 3 ? ColorManager.primaryColor : Colors.grey,
+                        color: currentTab == 3
+                            ? ColorManager.primaryColor
+                            : Colors.grey,
                       ),
                       Text(
                         StringManager.newsFeeds,
                         style: TextStyle(
-                          color:
-                              currentTab == 3 ? ColorManager.primaryColor : Colors.grey,
+                          color: currentTab == 3
+                              ? ColorManager.primaryColor
+                              : Colors.grey,
                         ),
                       )
                     ],
@@ -208,14 +221,16 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     children: [
                       Icon(
                         Icons.person,
-                        color:
-                            currentTab == 2 ? ColorManager.primaryColor : Colors.grey,
+                        color: currentTab == 2
+                            ? ColorManager.primaryColor
+                            : Colors.grey,
                       ),
                       Text(
                         StringManager.profile,
                         style: TextStyle(
-                          color:
-                              currentTab == 2 ? ColorManager.primaryColor : Colors.grey,
+                          color: currentTab == 2
+                              ? ColorManager.primaryColor
+                              : Colors.grey,
                         ),
                       )
                     ],
@@ -225,7 +240,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             ),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.miniCenterDocked,
       ),
     );
   }

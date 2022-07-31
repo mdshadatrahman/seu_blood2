@@ -35,7 +35,9 @@ class StringManager {
   static String reEnterPassword = 'Re-enter password*';
   static String reEnterPasswordHint = 'Enter the same password again';
   static String bloodGroup = 'Blood Group*';
+  static String bloodGroup1 = 'Blood Group';
   static String selectBloodGroup = 'Select your blood group';
+  static String selectBloodType = 'Whole Blood (Regular)';
   static String submit = 'Submit'.toUpperCase();
   static String alreadyAMember = 'Already a member so click here and login';
   static String confirmExit = 'Confirm Exit';
@@ -55,4 +57,10 @@ class StringManager {
   static String donorDetails = 'donor details'.toUpperCase();
   static String bloodRequest = 'Blood Request';
   static String donationHistory = 'Donation History';
+  static String request = 'Request';
+  static String bagYouNeed = 'Bag You Need';
+  static String time = 'Time';
+  static String bloodType = 'Type of Blood';
+  static String hospitalName = 'Hospital Name';
+  static String contactNumber = 'Contact Number';
 }

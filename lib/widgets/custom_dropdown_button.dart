@@ -5,7 +5,6 @@ import 'package:seu_blood_2/utils/app_strings.dart';
 
 class CustomDropDownButton extends StatefulWidget {
   const CustomDropDownButton({Key? key}) : super(key: key);
-
   @override
   State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
 }
