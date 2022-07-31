@@ -24,7 +24,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: ColorManager.primaryColor,
@@ -34,7 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: height * 0.5,
+              height: height * 0.3,
+              width: height * 0.3,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -44,6 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
+            SizedBox(height: height * 0.03),
             Text(
               StringManager.bloodCommunity.toUpperCase(),
               style: const TextStyle(

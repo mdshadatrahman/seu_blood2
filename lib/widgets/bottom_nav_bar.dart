@@ -90,25 +90,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           },
           backgroundColor: ColorManager.primaryColor,
           elevation: 0,
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.add,
-                  color: ColorManager.white,
-                ),
-                Text(
-                  StringManager.makeAPost,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 8,
-                    fontWeight: FontWeight.bold,
-                    color: ColorManager.white,
-                  ),
-                ),
-              ],
+          child: const Center(
+            child: Icon(
+              Icons.add,
+              color: ColorManager.white,
             ),
           ),
         ),
