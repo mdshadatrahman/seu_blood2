@@ -4,6 +4,7 @@ Building an app for South East University Blood Community
 
 ## Getting Started
 
+![Splash Screen](/screenshots/img_7.png?raw=true "Splash Screen")
 ![Login Screen](/screenshots/img.png?raw=true "Login Screen")
 ![Phone Number](/screenshots/img_1.png?raw=true "Phone Number")
 ![OTP Screen](/screenshots/img_2.png?raw=true "OTP Screen")
