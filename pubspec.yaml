@@ -35,6 +35,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.3
   datetime_picker_formfield: ^2.0.0
+  modal_progress_hud_nsn: ^0.2.1
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

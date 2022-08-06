@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seu_blood_2/pages/auth/functions/authentications.dart';
 import 'package:seu_blood_2/pages/auth/phone_number.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
@@ -19,6 +20,16 @@ late double height;
 late double width;
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController userNameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    userNameController.dispose();
+    passwordController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
@@ -107,6 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintText: StringManager.typeYourEmailPhoneID,
                       isPassword: false,
                       keyboardType: TextInputType.text,
+                      controller: userNameController,
                     ),
                     const SizedBox(height: 10),
                     CustomTextFormField(
@@ -116,6 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintText: StringManager.typeYourPassword,
                       isPassword: true,
                       keyboardType: TextInputType.text,
+                      controller: passwordController,
                     ),
                   ],
                 ),
@@ -132,13 +145,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     text: StringManager.loginText,
                     width: width,
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              const CustomBottomNavigationBar(),
-                        ),
+                      Auth.login(
+                        userNameController.text.toString(),
+                        passwordController.text.toString(),
                       );
+
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) =>
+                      //         const CustomBottomNavigationBar(),
+                      //   ),
+                      // );
                     },
                   ),
                   CustomElevatedButton(
