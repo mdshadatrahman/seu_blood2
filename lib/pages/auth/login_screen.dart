@@ -22,6 +22,7 @@ late double width;
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController userNameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  Auth auth = Auth();
 
   @override
   void dispose() {
@@ -145,18 +146,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     text: StringManager.loginText,
                     width: width,
                     onTap: () {
-                      Auth.login(
-                        userNameController.text.toString(),
-                        passwordController.text.toString(),
+                      auth.login2(
+                        username: userNameController.text.toString(),
+                        password: passwordController.text.toString(),
+                        onSuccess: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const CustomBottomNavigationBar(),
+                          ),
+                        ),
                       );
-
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) =>
-                      //         const CustomBottomNavigationBar(),
-                      //   ),
-                      // );
                     },
                   ),
                   CustomElevatedButton(
