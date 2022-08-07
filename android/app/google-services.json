@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "535053336804",
+    "project_id": "seu-blood",
+    "storage_bucket": "seu-blood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535053336804:android:1e7b726eeb040681962cf1",
+        "android_client_info": {
+          "package_name": "com.example.seu_blood2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535053336804-bcjtkvibto0c698t9v9qec0p8c599q8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdqmA7lMtBQk5NdGtExuHOhtHo43dWaQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535053336804-bcjtkvibto0c698t9v9qec0p8c599q8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
