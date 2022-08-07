@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:seu_blood_2/pages/auth/otp_screen.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
@@ -18,6 +19,26 @@ late double width;
 
 class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
   TextEditingController phoneNumberController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    phoneNumberController.dispose();
+  }
+
+  void verifyPhoneNumber(String phoneNumber) async {
+    await FirebaseAuth.instance.verifyPhoneNumber(
+      phoneNumber: phoneNumber,
+      verificationCompleted: (PhoneAuthCredential credential) {
+        debugPrint("Verified");
+      },
+      verificationFailed: (FirebaseAuthException e) {
+        debugPrint(e.toString());
+      },
+      codeSent: (String verificationId, int? resendToken) {},
+      codeAutoRetrievalTimeout: (String verificationId) {},
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -159,14 +180,15 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                     text: StringManager.sendText,
                     width: width,
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => OTPScreen(
-                            phoneNumber: phoneNumberController.text,
-                          ),
-                        ),
-                      );
+                      verifyPhoneNumber(phoneNumberController.text.toString());
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => OTPScreen(
+                      //       phoneNumber: phoneNumberController.text,
+                      //     ),
+                      //   ),
+                      // );
                     },
                   ),
                 ],
