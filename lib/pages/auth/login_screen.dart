@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seu_blood_2/pages/auth/functions/authentications.dart';
-import 'package:seu_blood_2/pages/auth/phone_number.dart';
+import 'package:seu_blood_2/pages/auth/verify_phone.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 import 'package:seu_blood_2/utils/app_strings.dart';
 import 'package:seu_blood_2/utils/asset_manager.dart';
