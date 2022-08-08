@@ -11,6 +11,7 @@ Widget phoneNumberScreen(
   double height,
   double width,
   TextEditingController phoneNumberController,
+    VoidCallback ontap,
 ) {
   return SingleChildScrollView(
     child: Stack(
@@ -146,7 +147,7 @@ Widget phoneNumberScreen(
               CustomElevatedButton(
                 text: StringManager.sendText,
                 width: width,
-                onTap: () {},
+                onTap: ontap,
               ),
             ],
           ),
