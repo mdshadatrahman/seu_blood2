@@ -1,11 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:seu_blood_2/pages/auth/functions/authentications.dart';
 import 'package:seu_blood_2/pages/splash/splash_screen.dart';
 import 'package:seu_blood_2/utils/app_colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  // Auth.registerWithEmailAndPassword('shadat.rahman.464@gmail.com', 'password1234');
+  Auth.loginWithEmailAndPassword('shadat.rahman.464@gmail.com', 'password1234');
   runApp(const MyApp());
 }
 
